@@ -1,0 +1,135 @@
+/* CSS Reset */
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+/* CSS Reset */
+/* General Configs */
+:root {
+    /*Primary*/
+    --orange: hsl(25, 97%, 53%);/*button, hover state*/
+    /*Neutral*/
+    --white: hsl(0, 0%, 100%); /*h1, hover state*/
+    --light-grey: hsl(217, 12%, 63%);/*select state*/
+    --medium-grey: hsl(216, 12%, 54%);/*p*/
+    --dark-blue: hsl(213, 19%, 18%);/*main*/
+    --very-dark-blue: hsl(216, 12%, 8%); /*body*/   
+
+}
+html {font-size: 15px;}
+body{
+    font-size: 100%;
+    list-style-type: none;
+    font-family: 'Overpass', sans-serif;
+    background-color: var(--very-dark-blue);
+    color: var(--medium-grey);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* General Configs */
+/* Card-feedback */
+.card-feedback {
+    max-width: 415px;
+    width: 90%;
+    margin: 0 auto;
+    background-color: var(--dark-blue);
+    padding: 30px;
+    border-radius: 20px;
+}
+/* Card Feedback Text */
+.card-feedback .feedback-text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+    margin-bottom: 25px; 
+}
+.icon {
+    display: inline-block;
+    padding: 8px 10px;
+    border-radius: 50%;
+    background-color: #3e3e3e;
+}
+.icon > img {
+    width: 13px;
+    vertical-align: middle;
+}
+.title {
+    color: var(--white);
+    margin-bottom: -5px;
+}
+/* Card Feedback Rating */
+.feedback-form .rating-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+.rating-button > input {
+    display: none;
+}
+.rating-button > .number {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #3e3e3e;
+    transition: all .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.number:hover {
+    background-color: var(--orange);
+    color: var(--white);
+}
+.rating-button > input:checked + .number {
+    background-color: var(--light-grey);
+    color: var(--white);
+}
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    text-transform: uppercase;
+    color: var(--white);
+    background-color: var(--orange);
+    letter-spacing: 2px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .2s;
+}
+.submit-btn:hover {
+    background-color: var(--white);
+    color: var(--orange)
+}
+/* Card-feedback */
+/* Thank You Card*/
+.thank-you-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.thank-you-card > .feedback-result {
+    background-color: #3e3e3e;
+    padding: 6px 10px;
+    border-radius: 20px;
+    color: var(--orange)
+}
+/* Thank You Card*/
+/* Attributions */
+.attribution {
+    position: absolute;
+    bottom: 20px;
+}
